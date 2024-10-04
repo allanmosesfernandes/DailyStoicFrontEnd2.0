@@ -62,27 +62,23 @@ export default function LoginPage() {
     };
 
     const signInWithGoogle = async () => {
-        await supabase.auth.signInWithOAuth({
-            provider: 'google',
-            options: {
-                redirectTo: `http://localhost:5173/`,
-            },
-        });
         try {
-            const response = await supabase.auth.signInWithOAuth({
+            // Start the Google OAuth sign-in process
+            const { error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: `http://localhost:5173/`,
+                    redirectTo: `http://localhost:5173/`, // Set the redirect URL after successful login
                 },
             });
-            if (response) {
-                toast({
-                    title: 'Login Successful',
-                    description: 'You have been logged in successfully.',
-                    duration: 3000,
-                });
-                navigate('/'); // Redirect to homepage after login
-            }
+
+            if (error) throw error;
+
+            // Show a toast indicating the sign-in process has started
+            toast({
+                title: 'Redirecting to Google...',
+                description: 'Please complete the Google sign-in process.',
+                duration: 3000,
+            });
         } catch (error) {
             console.error('Login Error:', error);
             toast({
