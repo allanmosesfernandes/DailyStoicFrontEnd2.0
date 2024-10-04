@@ -6,12 +6,8 @@ const About = () => {
                     About
                 </h1>
                 <p className="lg:text-3xl text-xl font-playfair lg:w-9/12 w-11/12 m-auto leading-10">
-                    Memento mori is a Latin phrase that means "remember that you must die." It is a
-                    reminder to focus on the present and to make the most of one's time, as death is
-                    inevitable. This website is dedicated to providing daily inspiration and
-                    guidance from the ancient philosophy of Stoicism. The goal is to help you
-                    navigate the challenges of modern life by sharing the wisdom of the Stoics, who
-                    believed in the power of self-control and the ability to rise above adversity.
+                    Daily stoic reminders is designed with a simple purpose:make Stoic philosophy accessible and actionable. Each day, receive a new Stoic quote to prompt reflection. Be present, be intentional, be grateful. Stoicism is not just a philosophy—it’s a way to live well, to turn adversity into strength, and to find peace within.<br />
+                    Whether you're new to Stoicism or experienced, Daily Stoic Reminders is here for your journey. Embrace the wisdom. Reflect. Make every day count.
                 </p>
             </div>
         </>

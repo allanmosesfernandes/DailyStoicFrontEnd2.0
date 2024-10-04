@@ -69,7 +69,7 @@ const Navbar = () => {
                         </li>
                         {user ? (
                         <>
-                            <Link to="/bookmarks" className="text-white font-playfair text-xl">
+                            <Link to="/bookmarks" onClick={toggleMobileMenu} className="text-white font-playfair text-xl">
                                 Bookmarks
                             </Link>
                             <Button onClick={logout} className="text-black font-playfair text-xl my-2">
