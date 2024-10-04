@@ -76,11 +76,11 @@ const BookmarkDetail = () => {
             <button className="w-8/12 flex flex-col items-end mb-5 mx-auto" onClick={deleteHandler}>
                 <img src={Trash} className='w-10'/>
             </button>
-            <div className="w-8/12 mx-auto text-2xl mt-6 px-4 font-playfair">
+            <div className="w-8/12 mx-auto lg:text-3xl sm:text-xl text-md mt-6 px-4 font-playfair">
                 <p className="font-playfair">{quote}</p>
                 <p className="mt-4 text-right">- {author}</p>
             </div>
-            <div className="w-8/12 mx-auto text-2xl mt-10 p-4 font-playfair leading-10">
+            <div className="w-8/12 mx-auto lg:text-3xl sm:text-xl text-md mt-10 p-4 font-playfair leading-10">
                 <p className="">{text}</p>
             </div>
             <SocialShare />
