@@ -1,0 +1,37 @@
+functionsDirectory = "C:\\Users\\AllanFernandes\\OneDrive - Responsible Life Ltd\\Documents\\GitHub\\Fullstack-Project\\DailyStoicRemindersFullStack\\codebase\\dailystoicFSfrontend\\netlify\\functions"
+functionsDirectoryOrigin = "ui"
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "ui"
+package = "@netlify/plugin-lighthouse"
+pinned_version = "6"
+
+[plugins.inputs]
+
+[build]
+publish = "C:\\Users\\AllanFernandes\\OneDrive - Responsible Life Ltd\\Documents\\GitHub\\Fullstack-Project\\DailyStoicRemindersFullStack\\codebase\\dailystoicFSfrontend\\dist"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "C:\\Users\\AllanFernandes\\OneDrive - Responsible Life Ltd\\Documents\\GitHub\\Fullstack-Project\\DailyStoicRemindersFullStack\\codebase\\dailystoicFSfrontend"
+command = "npm run build"
+functions = "C:\\Users\\AllanFernandes\\OneDrive - Responsible Life Ltd\\Documents\\GitHub\\Fullstack-Project\\DailyStoicRemindersFullStack\\codebase\\dailystoicFSfrontend\\netlify\\functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

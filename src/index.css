@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    :root {
+        --background: #09090b;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+        --radius: 0.5rem;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+    }
+
+    .dark {
+        --background: #09090b;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-5: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-2: 340 75% 55%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    @font-face {
+        font-family: 'Gothic';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('./assets/fonts/gothic.ttf') format('truetype');
+    }
+
+    .quote-capitalize {
+        font-family: 'Gothic';
+        font-size: 2.5rem;
+        position: absolute;
+        left: -30px;
+        top: 3px;
+        border: 1px solid white;
+        width: 45px;
+        height: auto;
+        line-height: 1;
+        padding: 1px;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 1.5rem;
+            left: -5px;
+            width: 20px;
+            line-height: 1.3;
+        }
+    }
+
+    .social-links li {
+        border-bottom: 1px solid white;
+        padding-bottom: 0.5rem;
+    }
+
+    .social-links li:nth-last-child(1) {
+        border-bottom: none;
+    }
+    .social-link {
+        cursor: pointer;
+        margin-left: 20px;
+        display: inline-flex; /* Use inline-flex to align text and image horizontally */
+        align-items: center;
+        width: 100%;
+        transition: transform 0.2s ease-in-out; /* Ensure smooth transition */
+    }
+
+    .social-link:hover {
+        transform: translateX(10px);
+    }
+
+    .social-plus {
+        margin-left: auto;
+        border-radius: 50%;
+        transition: transform 0.2s ease-in-out; /* Smooth transition */
+    }
+
+    .social-link:hover .social-plus {
+        transform: rotate(45deg);
+        border: 1px solid white;
+        width: 20px;
+        height: 20px;
+    }
+    .loader {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 1s linear infinite;
+        display: block;
+        margin: auto;
+    }
+    .loader::before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        animation: prixClipFix 2s linear infinite;
+    }
+    .mouse {
+        width: 50px;
+        height: 90px;
+        border: 3px solid #cbd5e1;
+        border-radius: 60px;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #cbd5e1;
+            border-radius: 50%;
+            opacity: 1;
+            animation: wheel 2s infinite;
+            -webkit-animation: wheel 2s infinite;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .mouse {
+            opacity: 0;
+        }
+    }
+    @keyframes wheel {
+        to {
+            opacity: 0;
+            top: 60px;
+        }
+    }
+
+    @-webkit-keyframes wheel {
+        to {
+            opacity: 0;
+            top: 60px;
+        }
+    }
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes prixClipFix {
+        0% {
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+        }
+        25% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+        }
+        50% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+        }
+        75% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+        }
+        100% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .habit-quote {
+            width: 90%;
+        }
+
+        .habit-blocks-container {
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem 0;
+
+            h4 {
+                width: 100%;
+                margin-top: 1.2rem;
+                margin-bottom: 0;
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .habit-number {
+                position: absolute;
+                left: 0;
+                top: 15px;
+                width: 20px;
+            }
+        }
+
+        .stoic-habits {
+            padding: 0 1rem;
+            margin: 1rem auto;
+            width: 95%;
+
+            h2,
+            h5 {
+                font-size: 2rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+                text-align: right;
+                width: 100%;
+            }
+
+            .img0 {
+                display: flex;
+                flex-direction: column;
+                width: 100px;
+                align-items: flex-end;
+                justify-content: space-evenly;
+            }
+
+            .fire-glowing {
+                width: 30px;
+            }
+        }
+    }
+
+    .stoic-habits {
+        padding: 0 3rem;
+        background-color: white;
+        color: black;
+        border-radius: 40px;
+        margin: 3rem auto;
+
+        h2,
+        h5 {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            width: 20%;
+            line-height: 1;
+            font-weight: 100;
+            text-align: left;
+        }
+
+        h5 {
+            font-size: 2rem;
+            text-align: right;
+            width: 100%;
+        }
+    }
+
+    .stoic-habits-title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fire-glowing {
+        animation: blink 3s ease-in-out infinite;
+        width: 50px;
+        margin-left: auto;
+    }
+
+    .img0 {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        align-items: flex-end;
+        height: 100;
+        justify-content: space-evenly;
+        margin-left: auto;
+    }
+
+    .habit-blocks-container {
+        position: relative;
+        border-top: 3px #000 dashed;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+
+        .habit-number {
+            position: absolute;
+            left: -20px;
+            top: 6%;
+            width: 30px;
+        }
+
+        h4 {
+            font-size: 2.3rem;
+            min-width: 300px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    }
+
+    .habit-quote {
+        display: block;
+        font-style: italic;
+        font-weight: bold;
+        border-left: 2px solid black;
+        padding-left: 10px;
+        margin: 1rem 0;
+        font-size: 1rem;
+        width: 75%;
+        font-family: 'Source Serif Pro', serif;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .mobile-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 750ms;
+        padding: 2rem 1.5rem;
+        z-index: 1;
+    }
+
+    .mobile-menu.active {
+        left: 0;
+    }
+}
+
+@layer components {
+    .title-styles {
+        position: relative;
+    }
+    .title-styles::before,
+    .title-styles::after {
+        content: '';
+        width: 50px;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        background: white;
+        left: -15%;
+    }
+    @media only screen and (max-width: 768px) {
+        .title-styles::before,
+        .title-styles::after {
+            width: 10px;
+            left: -5%;
+            display: none;
+        }
+    }
+    .title-styles::after {
+        left: 101% !important;
+    }
+}
