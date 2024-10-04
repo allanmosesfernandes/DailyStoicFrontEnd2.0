@@ -14,7 +14,7 @@ const BookMarkButton = ({ quote }) => {
     const goToBookMarksPage = () => {
         navigate('/bookmarks');
     };
-    const addBookmark = async (quoteOfTheDay, notes = '') => {
+    const addBookmark = async (quoteOfTheDay) => {
         if (!user) {
             toast({
                 title: 'Please Sign In',
