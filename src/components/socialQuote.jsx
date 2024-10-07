@@ -32,14 +32,14 @@ const SocialShare = () => {
                     <li className="flex align-center">
                         <p className="">02.</p>
                         <WhatsappShareButton url={shareURL} className="social-link">
-                            Twitter
+                            Whatsapp
                             <img src={plus} alt="Plus Sign" className="social-plus" />
                         </WhatsappShareButton>
                     </li>
                     <li className="flex align-center">
                         <p className="">03.</p>
                         <TwitterShareButton url={shareURL} className="social-link">
-                            Whatsapp
+                            Twitter
                             <img src={plus} alt="Plus Sign" className="social-plus" />
                         </TwitterShareButton>
                     </li>

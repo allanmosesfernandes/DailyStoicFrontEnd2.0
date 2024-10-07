@@ -1,3 +1,10 @@
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@/components/ui/accordion';
+
 const StoicHabits = () => {
     return (
         <>
@@ -89,6 +96,29 @@ const StoicHabits = () => {
                             </div>
                         </li>
                     </ul>
+
+                    {/* <Accordion type="single" collapsible className="mx-auto lg:text-2xl sm:text-xl text-md font-playfair lg:w-9/12 w-11/12 m-auto leading-10">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger><span className='font-gothic'>1.</span>Start your day with gratitude{' '}</AccordionTrigger>
+                            <AccordionContent className='lg:text-2xl sm:text-xl text-md font-playfair'>
+                            <p className="italic mb-3">
+                                    <span className="">
+                                        When you arise in the morning, think of what a precious
+                                        privilege it is to be alive — to breathe, to think, to
+                                        enjoy, to love.
+                                    </span>
+                                    — Marcus Aurelius
+                                </p>
+                                <p>
+                                    Begin each day by listing three things you are grateful for. It
+                                    could be something simple, like the warmth of the morning sun, a
+                                    fresh cup of coffee, or the kindness of a friend. This small
+                                    ritual helps shift your perspective to focus on the positives
+                                    and cultivates a sense of fulfillment and contentment.
+                                </p>
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion> */}
                 </div>
             </div>
         </>
