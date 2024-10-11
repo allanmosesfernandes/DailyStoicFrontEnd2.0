@@ -20,8 +20,8 @@ const SocialShare = () => {
             <p className="lg:text-4xl text-xl font-playfair">
                 <span className="font-gothic">S</span>hare quote:
             </p>
-            <div className="leading-tight lg:text-2xl sm:text-xl text-md font-playfair justify-center gap-6 lg:w-8/12 mx-auto mb-10 w-10/12">
-                <ul className="social-links lg:text-2xl sm:text-xl text-md">
+            <div className="leading-tight lg:text-xl sm:text-xl text-md font-playfair justify-center gap-6 lg:w-8/12 mx-auto mb-10 w-10/12">
+                <ul className="social-links lg:text-xl sm:text-xl text-md">
                     <li className="flex align-center">
                         <p className="">01.</p>
                         <div className="social-link" onClick={handleCopyLink}>

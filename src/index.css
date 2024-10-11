@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,9 +77,8 @@
     .quote-capitalize {
         font-family: 'Gothic';
         font-size: 2.5rem;
-        position: absolute;
-        left: -30px;
-        top: 3px;
+        left: -45px;
+        top: -3px;
         border: 1px solid white;
         width: 45px;
         height: auto;

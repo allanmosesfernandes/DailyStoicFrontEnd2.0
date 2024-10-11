@@ -41,10 +41,10 @@ const BookmarksPage = () => {
         <div className="d-flex flex-column align-items-center justify-center text-center h-lvh">
             <span className="sm:ml-[50px] ml-[20px] flex mb-5">
                 <Link to="/">
-                    <img src={back} className='sm:w-full w-[20px]'/>
+                    <img src={back} className="sm:w-full w-[20px]" />
                 </Link>
             </span>
-            <h1 className="font-gothic text-4xl lg:text-8xl border-t-2 border-slate-400 border-b-2 mt-0 mb-10 p-4">
+            <h1 className="font-gothic text-4xl lg:text-6xl border-t-2 border-slate-400 border-b-2 mt-0 mb-10 p-4">
                 Bookmarks
             </h1>
             {/* Loader */}
@@ -66,7 +66,7 @@ const BookmarksPage = () => {
                                             {index + 1 < 10 ? `0${index + 1}` : index + 1}.
                                         </p>
                                         <div className="social-link sm:ml-4 ml-2">
-                                            <p className='text-[18px] font-playfair'>
+                                            <p className="text-[18px] font-playfair">
                                                 {`${capitalizeFirstLetter(
                                                     bookmark.collection.title
                                                 )}.`}

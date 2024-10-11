@@ -92,7 +92,7 @@ export default function LoginPage() {
     return (
         <div>
             {/* Login Form */}
-            <h1 className="font-gothic text-4xl lg:text-8xl border-t-2 border-slate-400 border-b-2 mb-10 p-4 text-center">
+            <h1 className="font-gothic text-4xl lg:text-6xl border-t-2 border-slate-400 border-b-2 mb-10 p-4 text-center">
                 Login
             </h1>
             <div className="flex flex-col lg:h-screen items-center">

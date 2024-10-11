@@ -114,7 +114,7 @@ const BookMarkButton = ({ quote }) => {
     }, [user]);
 
     return (
-        <button className="sm:absolute sm:m-0 mb-2 top-0 right-0" onClick={() => addBookmark(quote)}>
+        <button className="sm:absolute sm:m-0 mb-2 top-0 right-0 w-[25px]" onClick={() => addBookmark(quote)}>
             <img src={isBookmarked ? bookmarkIconFull : bookmarkIconEmpty} />
         </button>
     );

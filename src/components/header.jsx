@@ -34,20 +34,20 @@ const Navbar = () => {
                     />
                 </Link>
                 <div className="sm:flex gap-4 items-center hidden">
-                    <Link to="/about" className="text-white font-playfair text-xl">
+                    <Link to="/about" className="text-white font-playfair text-lg">
                         About
                     </Link>
                     {user ? (
                         <>
-                            <Link to="/bookmarks" className="text-white font-playfair text-xl">
+                            <Link to="/bookmarks" className="text-white font-playfair text-lg">
                                 Bookmarks
                             </Link>
-                            <Button onClick={logout} className="text-black font-playfair text-xl">
+                            <Button onClick={logout} className="text-black font-playfair text-lg">
                                 Sign out
                             </Button>
                         </>
                     ) : (
-                        <Link to="/login" className="text-white font-playfair text-xl">
+                        <Link to="/login" className="text-white font-playfair text-lg">
                             Login
                         </Link>
                     )}
@@ -63,7 +63,7 @@ const Navbar = () => {
                         <img src={close} alt="mobile menu" className="w-[30px]" />
                     </div>
 
-                    <ul className="flex flex-col gap-2 align-left mt-[5] font-playfair text-xl text-left">
+                    <ul className="flex flex-col gap-2 align-left mt-[5] font-playfair text-lg text-left">
                         <li>
                             <Link to="/about" onClick={toggleMobileMenu}>About</Link>
                         </li>
@@ -72,12 +72,12 @@ const Navbar = () => {
                             <Link to="/bookmarks" onClick={toggleMobileMenu} className="text-white font-playfair text-xl">
                                 Bookmarks
                             </Link>
-                            <Button onClick={logout} className="text-black font-playfair text-xl my-2">
+                            <Button onClick={logout} className="text-black font-playfair text-lg my-2">
                                 Sign out
                             </Button>
                         </>
                     ) : (
-                        <Link to="/login" className="text-white font-playfair text-xl" onClick={toggleMobileMenu}>
+                        <Link to="/login" className="text-white font-playfair text-lg" onClick={toggleMobileMenu}>
                             Login
                         </Link>
                     )}

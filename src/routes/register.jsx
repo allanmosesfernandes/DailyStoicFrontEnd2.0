@@ -55,7 +55,7 @@ export default function Register() {
 
     return (
         <div>
-            <h1 className="font-gothic text-4xl lg:text-8xl border-t-2 border-slate-400 border-b-2 mb-10 p-4 text-center">
+            <h1 className="font-gothic text-4xl lg:text-6xl border-t-2 border-slate-400 border-b-2 mb-10 p-4 text-center">
                 Register
             </h1>
             <div className="flex flex-col h-screen items-center">
